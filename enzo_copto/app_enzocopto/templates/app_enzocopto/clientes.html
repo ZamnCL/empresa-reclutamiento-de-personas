@@ -1,0 +1,22 @@
+{% load static %}
+
+{% extends 'app_enzocopto/base.html' %}
+{% block title %}Clientes - Empresa Reclutamiento{% endblock %}
+{% block content %}
+<h2 class="text-center mb-4">Categoría: Clientes</h2>
+<div class="row">
+    {% for i in "12345678910" %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'app_enzocopto/imagen_'|add:i|add:'_clientes.jpg' %}" class="card-img-top" alt="Cliente {{ i }}">
+            <div class="card-body">
+                <h5 class="card-title">Nombre {{ i }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Profesión/Oficio {{ i }}</h6>
+                <p class="card-text">Reseña del cliente {{ i }}: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin sodales, nulla id efficitur pharetra, nibh dui iaculis nisl, in feugiat est lorem at sem.</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
