@@ -2,49 +2,56 @@
 {% load static %}
 
 {% block title %}Inicio - Empresa Reclutamiento{% endblock %}
-
 {% block content %}
-<div class="text-center mb-4">
-    <h2>Bienvenido a Empresa Reclutamiento</h2>
-    <p class="lead">Conectamos talento con oportunidades reales para impulsar el crecimiento de personas y organizaciones.</p>
-</div>
+<h2 class="text-center mb-5">Bienvenido a nuestra empresa de reclutamiento</h2>
 
-<section class="my-4">
-    <h3>Reseña</h3>
-    <p>Somos una consultora especializada en reclutamiento y selección. Acompañamos a nuestros clientes
-    en todo el ciclo de contratación, brindando soluciones innovadoras y adaptadas a sus necesidades.
-    Nuestro equipo está compuesto por profesionales apasionados por conectar talento con oportunidades.
-    Creemos en construir relaciones a largo plazo, fomentando el crecimiento de personas y empresas.
-    Nuestra meta es ser un socio estratégico de confianza para cada cliente.</p>
-</section>
-
-<section class="my-4">
-    <h3>Visión</h3>
-    <p>Ser líderes en el sector de reclutamiento y selección en América Latina, destacándonos por nuestra innovación,
-    compromiso con la excelencia y contribución al desarrollo del talento humano.</p>
-</section>
-
-<section class="my-4">
-    <h3>Misión</h3>
-    <p>Proporcionar soluciones efectivas de reclutamiento, garantizando la satisfacción de nuestros clientes
-    y el crecimiento profesional de los candidatos, siempre con ética y transparencia.</p>
-</section>
-
-<div class="row text-center mt-4">
-    <div class="col-md-4">
-        <img src="{% static 'app_enzocopto/imagen_1_index.jpg' %}" class="img-fluid rounded" alt="Imagen 1">
+<!-- Sección de accesos a categorías -->
+<div class="row text-center mb-5">
+    <div class="col-md-4 mb-3">
+        <a href="{% url 'personal' %}" class="link-card">
+            <h4 class="mb-0">Personal</h4>
+        </a>
     </div>
-    <div class="col-md-4">
-        <img src="{% static 'app_enzocopto/imagen_2_index.jpg' %}" class="img-fluid rounded" alt="Imagen 2">
+    <div class="col-md-4 mb-3">
+        <a href="{% url 'clientes' %}" class="link-card">
+            <h4 class="mb-0">Clientes</h4>
+        </a>
     </div>
-    <div class="col-md-4">
-        <img src="{% static 'app_enzocopto/imagen_3_index.jpg' %}" class="img-fluid rounded" alt="Imagen 3">
+    <div class="col-md-4 mb-3">
+        <a href="{% url 'egresados' %}" class="link-card">
+            <h4 class="mb-0">Egresados</h4>
+        </a>
     </div>
 </div>
 
-<div class="text-center mt-5">
-    <a href="{% url 'personal' %}" class="btn btn-primary m-2">Personal</a>
-    <a href="{% url 'clientes' %}" class="btn btn-success m-2">Clientes</a>
-    <a href="{% url 'egresados' %}" class="btn btn-info m-2">Egresados</a>
+<!-- Sección de reseña, misión y visión de la empresa -->
+<div class="company-section">
+    <h3 class="text-center">Sobre Nosotros</h3>
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <h4 class="fw-bold text-secondary">Reseña</h4>
+            <p>{{ reseña }}</p>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h4 class="fw-bold text-secondary">Visión</h4>
+            <p>{{ vision }}</p>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h4 class="fw-bold text-secondary">Misión</h4>
+            <p>{{ mision }}</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <img src="{% static 'app_enzocopto/imagen_1_index.jpg' %}" alt="Imagen de la empresa 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'app_enzocopto/imagen_2_index.jpg' %}" alt="Imagen de la empresa 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'app_enzocopto/imagen_3_index.jpg' %}" alt="Imagen de la empresa 3" class="img-fluid rounded">
+        </div>
+    </div>
 </div>
+
 {% endblock %}

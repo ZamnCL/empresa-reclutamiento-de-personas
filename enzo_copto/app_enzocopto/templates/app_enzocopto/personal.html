@@ -1,20 +1,27 @@
+{% extends 'app_enzocopto/base.html' %}
 {% load static %}
 
-{% extends 'app_enzocopto/base.html' %}
 {% block title %}Personal - Empresa Reclutamiento{% endblock %}
 {% block content %}
 <h2 class="text-center mb-4">Categoría: Personal</h2>
 <div class="row">
-    {% for i in "12345" %}
-    <div class="col-md-4 mb-4">
+    {% for persona in equipo %}
+    <div class="col-md-6 mb-4">
         <div class="card h-100">
-            <img src="{% static 'app_enzocopto/imagen_'|add:i|add:'_personal.jpg' %}" class="card-img-top" alt="Personal {{ i }}">
             <div class="card-body">
-                <h5 class="card-title">Nombre {{ i }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Cargo {{ i }}</h6>
-                <p class="card-text">Descripción del trabajador {{ i }}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
-                imperdiet. Duis sagittis ipsum.</p>
+                <h5 class="card-title">{{ persona.nombre }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ persona.cargo }}</h6>
+                <p class="card-text">{{ persona.descripcion }}</p>
+                <div class="personal-images mt-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{% static 'app_enzocopto/'|add:persona.imagen1 %}" alt="Imagen de {{ persona.nombre }}" class="img-fluid rounded">
+                        </div>
+                        <div class="col-6">
+                            <img src="{% static 'app_enzocopto/'|add:persona.imagen2 %}" alt="Imagen de {{ persona.nombre }}" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

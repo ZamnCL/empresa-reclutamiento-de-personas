@@ -1,0 +1,125 @@
+.color1 {color: #979087;}
+.color2 {color: #a6a9af;}
+.color3 {color: #0f364d;}
+.color4 {color: #828e95;}
+.color5 {color: #eeebe5;}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+font-family: 'Inter', sans-serif;
+background-color: #EEEBE5;
+color: #979087;
+}
+
+header {
+background-color: #EEEBE5;
+border-bottom: 2px solid #0F364D;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header a, header small, header h1 {
+color: #0F364D;
+}
+
+header img {
+max-height: 60px;
+width: auto;
+}
+
+main.container {
+padding-top: 40px;
+padding-bottom: 40px;
+}
+
+main.container h2,
+.company-section h4 {
+color: #0F364D;
+}
+
+.card {
+border-radius: 12px;
+border: none;
+background-color: #F8F9FA;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+font-weight: 600;
+color: #0F364D;
+}
+
+.card-subtitle {
+font-weight: 400;
+color: #828E95 !important;
+}
+
+.card-text {
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+.card-img-top {
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+height: 200px;
+object-fit: cover;
+}
+
+.link-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: #EEEBE5;
+background-color: #0F364D;
+border-radius: 12px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-card:hover {
+transform: translateY(-5px);
+background-color: #A6A9AF;
+}
+
+.link-card h4 {
+margin-bottom: 0;
+font-weight: 600;
+}
+
+.company-section {
+background-color: #F8F9FA;
+border-radius: 12px;
+padding: 30px;
+margin-bottom: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-section h3 {
+color: #0F364D;
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+.company-section img {
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+footer {
+background-color: #0F364D;
+color: #EEEBE5;
+text-align: center;
+padding: 20px 0;
+margin-top: 40px;
+}
