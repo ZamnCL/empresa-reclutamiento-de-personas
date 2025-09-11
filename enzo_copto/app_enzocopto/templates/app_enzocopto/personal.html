@@ -3,6 +3,7 @@
 
 {% block title %}Personal - Empresa Reclutamiento{% endblock %}
 {% block content %}
+<a href="{% url 'index' %}" class="btn-volver">← Volver al Inicio</a>
 <h2 class="text-center mb-4">Categoría: Personal</h2>
 <div class="row">
     {% for persona in equipo %}
